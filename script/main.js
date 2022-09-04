@@ -1,6 +1,5 @@
 window.addEventListener(`scroll`, scrollando)
 
-
 function scrollando(){
     let navbar = document.getElementById(`navbar`)
     if(scrollY > 35){
