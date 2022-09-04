@@ -2,13 +2,13 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
 :root {
-    font-size: 62.5%;
+    font-size: 61.5%;
     font-family: "Inter", sans-serif;
     --red: #da2535;
     --gray: #616161;
     --white: #fbfbfb;
     --black: #292929;
-    --white-200: #f3f3f3;
+    --white-200: #f1f1f1;
 }
 * {
     margin: 0;
@@ -23,10 +23,15 @@ h5,
 h6 {
     font-family: "Montserrat", sans-serif;
 }
-h2{
+h2 {
     font-size: 4.8rem;
     font-weight: 600;
     line-height: 5.9rem;
+}
+h3 {
+    font-weight: 500;
+    font-size: 3.2rem;
+    line-height: 3.9rem;
 }
 body {
     background: var(--white);
@@ -58,7 +63,7 @@ body {
 #navbar .logo {
     width: 15.7rem;
 }
-#navbar .entrar-button{
+#navbar .entrar-button {
     font-size: 2.4rem;
     background: none;
     border-radius: 10px;
@@ -74,7 +79,7 @@ body {
     justify-content: space-between;
     margin-bottom: 10rem;
 }
-#header .lside1 p{
+#header .lside1 p {
     font-size: 2.4rem;
     max-width: 52rem;
     margin-top: 2.4rem;
@@ -82,7 +87,7 @@ body {
     line-height: 160%;
     font-weight: 400;
 }
-#header .lside1 button{
+#header .lside1 button {
     background-color: var(--red);
     border: none;
     border-radius: 1rem;
@@ -91,7 +96,7 @@ body {
     color: var(--white);
     line-height: 2.9rem;
 }
-#header .rside1 img{
+#header .rside1 img {
     width: 40rem;
 }
 /* ============HEADER 2=========== */
@@ -103,7 +108,7 @@ body {
     margin-bottom: 10rem;
     gap: 12.4rem;
 }
-#header .rside2 p{
+#header .rside2 p {
     font-size: 2.4rem;
     max-width: 50rem;
     margin-top: 2.4rem;
@@ -111,12 +116,48 @@ body {
     line-height: 160%;
     font-weight: 400;
 }
-#header .second-header .lside2 img{
+#header .second-header .lside2 img {
     max-width: 60.4rem;
 }
-#header .second-header .rside2 a{
+#header .second-header .rside2 a {
     font-size: 2.4rem;
     color: var(--red);
-    font-family: 'Inter';
+    font-family: "Inter";
     text-decoration: line;
+}
+/* ===============MAIS POPULARES================== */
+#main {
+    display: flex;
+    justify-content: space-between;
+    gap: 4.4rem;
+}
+
+#main .food-box {
+    max-width: 38rem;
+    height: 55.8rem;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+    padding-inline: 4.5rem;
+    padding-bottom: 3.2rem;
+    text-align: center;
+}
+#main .food-box p{
+    font-size: 1.8rem;
+}
+
+#main .food-box::after {
+    opacity: 100%;
+    display: block;
+    content: "";
+    width: 100%;
+    height: 45rem;
+    background-color: var(--white-200);
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    position: absolute;
+    border-radius: 32px;
 }
