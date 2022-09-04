@@ -8,14 +8,14 @@
     </head>
     <body>
         <header id="header">
-            <nav id="navbar">
+            <nav id="navbar" class="">
                 <div class="logo">
                     <img class="img-logo" src="assets/logo.svg" alt="" />
                 </div>
                 <div id="buttons-nav">
-                    <button>Inicio</button>
-                    <button>Cardápio</button>
-                    <button>Sobre</button>
+                    <a href="#">Inicio</a>
+                    <a href="#most-pop">Cardápio</a>
+                    <a href="#footer">Sobre</a>
                 </div>
                 <button class="entrar-button">Entrar</button>
             </nav>
@@ -27,7 +27,7 @@
                             A culinária Japonesa é bastante equilibrada, sendo muito rica em peixes
                             (ômega 3), vegetais, massas e ingredientes frescos.
                         </p>
-                        <button>Cardápio</button>
+                        <a href="#most-pop">Cardápio</a>
                     </div>
                     <div class="rside1">
                         <img src="assets/imgheader1.svg" alt="" />
@@ -74,5 +74,61 @@
                 <h3>R$ 30</h3>
             </div>
         </main>
+        <section id="section">
+            <div class="comments-box">
+                <h2>Comentários</h2>
+                <div class="cards">
+                    <div class="card">
+                        <img class="pic-person" src="assets/daniele.svg" alt="">
+                        <h3>Daniele Almeida</h3>
+                        <p>Ótimo serviço! Encantada com a qualidade dos pratos.</p>
+                        <img src="assets/stars.svg" alt="">
+                    </div>
+                    <div class="card">
+                        <img class="pic-person" src="assets/ricardo.svg" alt="">
+                        <h3>Ricardo França</h3>
+                        <p>Não é apenas a comida excelente, o serviço torna a experiência especial.</p>
+                        <img src="assets/stars.svg" alt="">
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="location">
+            <h2>Localização</h2>
+            <img id="map" src="assets/map.svg" alt="">
+            <span>
+                <div class="location-delivery">
+                    <img src="assets/pin.svg" alt="">
+                    <p>Localização para entrega</p>
+                </div>
+                <button>
+                    Buscar
+                </button>
+            </span>
+        </section>
+        <footer id="footer">
+            <div class="logo">
+                <img src="assets/logo.svg" alt="">
+            </div>
+            <div class="footer-items">
+                <div class="contact item-f">
+                    <h3>Contato</h3>
+                    <p>+55 21 9999-9999</p>
+                    <p>email@gmail.com</p>
+                </div>
+                <div class="contact item-f">
+                    <h3>Sobre Nós</h3>
+                    <p>Menu</p>
+                    <p>Valores</p>
+                    <p>Página Principal</p>
+                </div>
+                <div class="about-us item-f">
+                    <h3>Serviços</h3>
+                    <p>Entrega</p>
+                    <p>Retirada</p>
+                </div>
+            </div>
+        </footer>
+        <script src="script/main.js"></script>
     </body>
 </html>

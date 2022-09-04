@@ -5,6 +5,7 @@
     font-size: 61.5%;
     font-family: "Inter", sans-serif;
     --red: #da2535;
+    --red-hover: hsl(355, 70%, 40%);
     --gray: #616161;
     --white: #fbfbfb;
     --black: #292929;
@@ -15,6 +16,9 @@
     padding: 0;
     box-sizing: border-box;
 }
+html {
+    scroll-behavior: smooth;
+  }
 h1,
 h2,
 h3,
@@ -27,6 +31,15 @@ h2 {
     font-size: 4.8rem;
     font-weight: 600;
     line-height: 5.9rem;
+}
+a{
+    text-decoration: none;
+}
+a:visited{
+    color: var(--black);
+}
+a:hover{
+    color: var(--gray);
 }
 h3 {
     font-weight: 500;
@@ -49,7 +62,19 @@ body {
     margin-top: 4rem;
     margin-bottom: 10rem;
 }
-#buttons-nav button {
+#navbar.scrolling{
+    position: fixed;
+    width: 100vw;
+    max-width: 122.8rem;
+    top: -4rem;
+    left: 50%;
+    z-index: 10;
+    transform: translate(-50%);
+    background-color: var(--white);
+    padding-block: 2rem;
+    padding-inline: 2rem;
+}
+#buttons-nav a {
     font-weight: 500;
     background: none;
     border: none;
@@ -69,6 +94,14 @@ body {
     border-radius: 10px;
     padding: 1rem 5.85rem;
     border: 2px solid --black;
+    box-shadow: none;
+    transition: 200ms;
+}
+#navbar .entrar-button:hover {
+    background-color: var(--black);
+    color: var(--white);
+    cursor: pointer;
+    transition: 200ms;
 }
 /* ============HEADERS=========== */
 /* ============HEADER 1=========== */
@@ -88,7 +121,7 @@ body {
     line-height: 160%;
     font-weight: 400;
 }
-#header .lside1 button {
+#header .lside1 a {
     background-color: var(--red);
     border: none;
     border-radius: 1rem;
@@ -96,6 +129,10 @@ body {
     font-size: 2.4rem;
     color: var(--white);
     line-height: 2.9rem;
+}
+#header .lside1 a:hover {
+    background-color: var(--red-hover);
+    cursor: pointer;
 }
 #header .rside1 img {
     width: 40rem;
@@ -140,6 +177,7 @@ body {
     transform: translate(-50%);
     margin-inline: auto;
 }
+
 #main .food-box {
     margin-top: 10rem;
     width: 38rem;
@@ -152,6 +190,7 @@ body {
     /* padding-inline: 4.5rem; */
     padding-bottom: 3.2rem;
     text-align: center;
+    margin-bottom: 10rem;
 }
 #main .food-box .descr-item{
     font-size: 1.8rem;
@@ -170,4 +209,101 @@ body {
     z-index: -1;
     position: absolute;
     border-radius: 32px;
+}
+/* ===============COMENTARIOS================== */
+#section .comments-box .cards{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 4.8rem;
+    margin-bottom: 10rem;
+}
+#section .comments-box .cards .card{
+    background-color: var(--white-200);
+    width: 58rem;
+    height: 39rem;
+    border-radius: 1.6rem;
+    padding-left: 4rem;
+    padding-top: 4rem;
+    display: flex;
+    flex-direction: column;
+}
+#section .comments-box .cards .card img{
+    width: 12rem;
+    margin-bottom: 2.4rem;
+}
+#section .comments-box .cards .card p{
+    font-size: 2.4rem;
+    margin-block: 1.6rem;
+    max-width: 49.2rem;
+}
+/* ===============LOCALIZACAO================== */
+#location h2{
+    margin-bottom: 4.8rem;
+}
+#location {
+    margin-bottom: 10rem;
+}
+#location span {
+    margin-top: 5.6rem;
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+#map{
+    width: 100%;
+}
+#location span .location-delivery{
+    border: 1px solid var(--black);
+    border-radius: 10px 0px 0px 10px;
+    max-width: 63rem;
+    height: 7rem;
+    padding-left: 2.4rem;
+    padding-right: 22.8rem;
+    padding-block: 2.2rem;
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+#location span .location-delivery p{
+    font-size: 2.4rem;
+    width: 100%;
+    height: 3rem;
+}
+#location span button{
+    background-color: var(--red);
+    border-radius: 0px 10px 10px 0px;
+    padding: 2rem 5.2rem;
+    color: var(--white);
+    font-size: 2.4rem;
+    box-shadow: none;
+    border: none;
+}
+
+/* ===============FOOTER================== */
+#footer {
+    display: flex;
+    flex-direction: row;
+    gap: 5.1rem;
+    margin-bottom: 10rem;
+}
+#footer .logo{
+    margin-top: .6rem;
+}
+#footer .footer-items{
+    display: flex;
+    justify-content: baseline;
+    gap: 16.2rem;
+
+}
+#footer .footer-items .item-f h3{
+    margin-bottom: 2.4rem;
+
+}
+#footer .footer-items .item-f p{
+    margin-bottom: 0.8rem;
+    font-size: 1.8rem;
+}
+
+@media screen {
+    
 }
